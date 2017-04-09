@@ -1,0 +1,440 @@
+﻿<?php
+echo '$_SESSION['userid']';
+?>
+
+<!DOCTYPE html>
+<head>
+<title>srkr network home page</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="screen.css" type="text/css" media="screen"/>
+</head>
+
+<body>
+<div class="logo">
+<img src="logo.png" alt="no image" width="250px" height="37px">
+
+<a class="logout" href="logout.php">log out</a>
+<a class="wiki" href="#">wiki</a>
+<a class="about" href="#">about</a>
+<a class="inbox" href="#">inbox</a>
+<a class="notifications" href="#">notifications</a>
+<a class="settings" href="#">settings</a>
+<a class="profile" href="#">profile</a>
+</div>
+
+<div class="empty_space"></div>
+
+<div class="column1 col-2">
+<!-- start of column-->
+
+<div class="profile_details ">
+<p><b>My details</b></p>
+<img src="images/boy_pic.png">
+<hr>
+<p>Kiran Puppala<br>Kalidindi, India<br>December 1, 1995</p>
+</div>
+
+<div class="photos_edit_list ">
+<a href="#">Edit Profile</a>
+<a href="#">My Photos</a>
+</div>
+<!--End of first column-->
+</div>
+
+<div class="column2 col-7">
+<!-- start of second column-->
+<div class="post ">
+<p style="opacity:.7">What's on your mind</p>
+<form action="<?php echo $_SERVER['PHP_SELF']?>" method="post">
+<input class="un" name="posttext" type="text" placeholder="post here" >
+<input class="submit" type="button" value="Post" name="submit" onclick="placeOrder(this.form);" >
+</form>
+</div>
+
+<div class="public_posts ">
+<img class="uploader_pic" src="images/girl.png" alt="no image">
+<p class="poster_name">Katy Perry</p>
+<p class="posted_time">1 min</p>
+<hr>
+<p class="post_description">Have a look at my new profile picture.I am looking sooooo gorgeous I think.It is taken with high definition camera.I think background made this photo more beautiful. </p>
+<img class="uploaded_pic" src="images/Katy.jpg" alt="mountains image">
+<div class="like_comment">
+<a href="#">Like</a>
+<a href="#">Comment</a>
+</div>
+</div>
+
+<div class="public_posts ">
+<img class="uploader_pic" src="images/girl.png" alt="no image">
+<p class="poster_name">Katy Perry</p>
+<p class="posted_time">1 min</p>
+<hr>
+<p class="post_description">Have a look at my new profile picture.I am looking sooooo gorgeous I think.It is taken with high definition camera.I think background made this photo more beautiful. </p>
+<img class="uploaded_pic" src="images/Katy.jpg" alt="mountains image">
+<div class="like_comment">
+<a href="#">Like</a>
+<a href="#">Comment</a>
+</div>
+</div>
+
+<div class="public_posts ">
+<img class="uploader_pic" src="images/girl.png" alt="no image">
+<p class="poster_name">Katy Perry</p>
+<p class="posted_time">1 min</p>
+<hr>
+<p class="post_description">Have a look at my new profile picture.I am looking sooooo gorgeous I think.It is taken with high definition camera.I think background made this photo more beautiful. </p>
+<img class="uploaded_pic" src="images/Katy.jpg" alt="mountains image">
+<div class="like_comment">
+<a href="#">Like</a>
+<a href="#">Comment</a>
+</div>
+</div>
+
+<!--end of second column-->
+</div>
+
+<div class="column3 col-2">
+<!-- start of third column-->
+
+<div class="new_event ">
+<p>What's Hot</p>
+<img src="images/holiday.jpg" alt="no image">
+<p>Holiday<br>Friday<br>Vinayaka Chaturdi</p>
+</div>
+
+<div class="friend_request">
+<p>Friend Request</p>
+<img src="images/scarlett.jpg" alt="no image">
+<p>Scarlett Johnson</p>
+<hr>
+<div class="accept_decline">
+<a href="#">Accept</a>
+<a href="#">Decline</a><br><br>
+<a href="#">Show More</a>
+</div>
+
+</div>
+
+
+<!--end of third column-->
+</div>
+
+</body>
+<style>
+body{
+//background:#DAE5F3;
+background:#f3f3f3;
+font-family:"Century Gothic";
+}
+
+.empty_space{
+height:80px;
+}
+
+
+
+.column1{
+float:left;
+
+}
+
+.column2{
+float:left;
+padding-left:3.5%;
+}
+
+.column3{
+float:left;
+padding-left:2%;
+}
+
+.profile_details{
+background:#fff;
+box-shadow:0 8px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+margin-top:0px;
+margin-left:10px;
+padding:20px;
+float:left;
+width:100%;
+border-radius:5px;
+text-align:center;
+}
+
+.profile_details p{
+line-height:180%;
+}
+
+
+.profile_details img {
+width:100px;
+height:100px;
+border-radius:1000px;
+margin:auto;
+display:block;
+}
+
+
+.photos_edit_list{
+background:#fff;
+box-shadow:0 8px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+margin-top:7px;
+margin-left:10px;
+padding:20px;
+float:left;
+width:100%;
+border-radius:5px;
+text-align:center;
+}
+
+.photos_edit_list a{
+text-decoration:none;
+background:#434343;
+color:#fff;
+width:100%;
+padding:15px;
+}
+
+.photos_edit_list a:hover{
+box-shadow:0 8px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.post{
+background:#fff;
+box-shadow:0 8px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+margin-top:0px;
+margin-left:10px;
+padding:10px;
+float:left;
+width:100%;
+border-radius:5px;
+}
+
+.public_posts{
+background:#fff;
+box-shadow:0 8px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+margin-top:7px;
+margin-left:10px;
+padding:10px;
+float:left;
+width:100%;
+border-radius:5px;
+}
+
+.public_posts img.uploader_pic{
+width:70px;
+height:70px;
+border-radius:1000px;
+float:left;
+display:block;
+}
+
+.public_posts img.uploaded_pic{
+float:left;
+margin:auto;
+display:block;
+}
+
+.public_posts p.posted_time{
+float:right;
+opacity:.7;
+padding-right:20px;
+}
+
+.public_posts p.poster_name{
+float:left;
+color:#434343;
+font-weight:bold;
+padding-left:20px;
+}
+
+.public_posts hr{
+margin-top:100px;
+//clear:both;
+}
+
+.like_comment{
+margin-top:20px;
+margin-left:0px;
+float:left;
+width:100%;
+
+}
+
+.like_comment a{
+text-decoration:none;
+background:#434343;
+color:#fff;
+width:100%;
+padding:5px;
+}
+
+.like_comment a:hover{
+box-shadow:0 8px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.new_event{
+background:#fff;
+box-shadow:0 8px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+margin-top:0px;
+margin-left:10px;
+padding:10px;
+float:left;
+width:100%;
+border-radius:5px;
+text-align:center;
+}
+
+.new_event img {
+width:200px;
+height:133px;
+margin:auto;
+display:block;
+}
+.new_event p{
+line-height:180%;
+}
+
+.friend_request{
+background:#fff;
+box-shadow:0 8px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+margin-top:7px;
+margin-left:10px;
+padding:10px;
+float:left;
+width:100%;
+border-radius:5px;
+text-align:center;
+}
+
+.friend_request img {
+margin:auto;
+display:block;
+}
+.friend_request p{
+line-height:180%;
+}
+
+.accept_decline{
+margin-top:15px;
+}
+
+.accept_decline a{
+margin-top:15px;
+text-decoration:none;
+background:#434343;
+color:#fff;
+width:100%;
+padding:5px;
+}
+
+.accept_decline a:hover{
+box-shadow:0 8px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+
+
+input{
+//width:100%;
+padding:12px 20px;
+margin:8px 0;
+box-sizing:border-box;
+font-family:"Century Gothic";
+}
+
+input[type="text"]{
+width:100%;
+border-style:ridge;
+
+border-width:1px;
+border-opacity:.5;
+}
+
+input[type="button"]{
+background-color:#434343;
+color:#fff;
+border:0px;
+}
+input[type="button"]:hover{
+box-shadow:0 8px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+border:0px;
+}
+
+
+//.post:after,.new_event:after,.profile_details:after,picture_edit_list:after
+//{content:"";display:table;clear:both}
+
+
+
+
+
+
+
+
+/*for mobile phones*/
+@media only screen and (max-width: 500px) {
+    body {
+margin:0;
+padding:0;
+    }
+
+    [class*="col-"] {
+        width: 100%;
+    }
+
+}
+/************************************************************/
+/*for desktop*/
+@media only screen and (min-width: 500px) {
+body{
+margin:0;
+padding:0;
+}
+
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+.logo{position:fixed;}
+}
+
+/******************************************************************************/
+
+
+
+.logo{
+margin:0;
+font-family:"Century Gothic";
+background-color:#434343;
+height:60px;
+width:100%;
+}
+
+.logo img{
+padding-top:12px;
+}
+
+div.logo a:link{background-color:#ffb3b3;color:white;padding:5px 10px;
+text-align:center;text-decoration:none;display:inline-block;border-radius:3px}
+div.logo a:visited{background-color:#ffb3b3;color:white;padding:5px 10px;
+text-align:center;text-decoration:none;display:inline-block;border-radius:3px}
+div.logo a:hover{background-color:#ff6666;color:white;padding:5px 10px;text-align:center;text-decoration:none;display:inline-block;border-radius:3px}
+div.logo a {float:right;padding:10px;margin-right:10px;margin-top:15px}
+
+
+
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+</style>
+</html>
